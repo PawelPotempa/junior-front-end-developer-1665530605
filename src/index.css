@@ -1,0 +1,53 @@
+:root {
+  --bg-grey: #f4f5f7;
+  --bg-white: #ffffff;
+  --active-color: #0165ff;
+  --active-bgc: #eef5ff;
+  --completed-color: #47bf7c;
+  --completed-bgc: #edf9f2;
+  --blocked-color: #aeb5c1;
+  --blocked-bgc: #f4f5f7;
+}
+
+html {
+  font-size: 1rem;
+  background-color: var(--bg-color);
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ol,
+ul {
+  margin: 0;
+  padding: 0;
+  font-weight: 400;
+  line-height: 1.5;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
