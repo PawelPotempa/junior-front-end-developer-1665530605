@@ -1,0 +1,42 @@
+.tasks__container {
+  background-color: var(--bg-white);
+  display: flex;
+  flex-direction: column;
+  min-height: 100%;
+  box-shadow: 0 1px 0 0 #dfe1e6;
+  border-radius: 0.75rem;
+}
+
+.divider {
+  border: 1px solid var(--bg-grey);
+  width: 100%;
+  margin: 0;
+}
+
+.tasks__header {
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.tasks__list {
+  padding: 1.5rem 0 1.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  font-weight: 500;
+  font-size: 0.75rem;
+  overflow-y: scroll;
+}
+
+.tasks__list::-webkit-scrollbar {
+  width: 1rem;
+}
+
+.tasks__list::-webkit-scrollbar-track {
+  background-color: var(--bg-grey);
+  outline: 0.4rem solid var(--bg-white);
+  outline-offset: -0.4rem;
+  border-radius: 1rem;
+  margin-bottom: 10rem;
+}

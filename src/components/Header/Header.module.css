@@ -1,0 +1,18 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 1rem;
+}
+
+.avatar__container {
+  height: 3rem;
+  border-radius: 50%;
+  outline: 1px solid #6b778c;
+  outline-offset: 2px;
+}
+
+.avatar {
+  height: 100%;
+  border-radius: 50%;
+}
