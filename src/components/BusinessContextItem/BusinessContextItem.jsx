@@ -1,5 +1,5 @@
 import styles from "./BusinessContextItem.module.css";
-import React, { useState } from "react";
+import React from "react";
 
 const BusinessContextItem = ({ item, clickHandler, active }) => {
   const { author, title, createdAt, content, seen } = item;
@@ -13,7 +13,9 @@ const BusinessContextItem = ({ item, clickHandler, active }) => {
 
   return (
     <li
-      className={`${styles.bcontext__item} ${active && styles["active"]}`}
+      className={`${styles.bcontext__item} ${active && styles["active"]} ${
+        !seen && styles["new"]
+      }`}
       onClick={clickHandler}
     >
       <div className={styles.bcontext__itemInfo}>
@@ -22,9 +24,9 @@ const BusinessContextItem = ({ item, clickHandler, active }) => {
         &#183;
         <span>{dateToMMDD(createdAt)}</span>
       </div>
-      <h2 className={`${styles.bcontext__itemTitle} ${!seen && styles["new"]}`}>
+      <h3 className={`${styles.bcontext__itemTitle} ${!seen && styles["new"]}`}>
         {title}
-      </h2>
+      </h3>
       <p className={styles.bcontext__itemContent}>{content}</p>
     </li>
   );

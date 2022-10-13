@@ -18,3 +18,10 @@
   width: 100%;
   margin: 0;
 }
+
+@media (max-width: 768px) {
+  .bcontext__details {
+    grid-template-columns: 1fr;
+    grid-template-rows: 1fr 2fr;
+  }
+}

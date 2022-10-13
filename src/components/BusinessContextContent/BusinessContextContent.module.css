@@ -1,5 +1,52 @@
+.bcontext__contentWrapper {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem 2.25rem;
+  gap: 0.75rem;
+}
+
+.bcontext__contentWrapper > h2 {
+  font-weight: 600;
+  color: #242325;
+}
+
 .bcontext__content {
   display: flex;
+  width: 100%;
+  gap: 1rem;
+}
+
+.bcontext__itemDetails {
+  color: #6b778c;
+  font-size: 0.75rem;
+}
+
+.bcontext__itemInfo {
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
+  gap: 0.5rem;
+}
+
+.bcontext__itemAuthor {
+  font-size: 1rem;
+  font-weight: 500;
+  color: #242325;
+}
+
+.bcontext__itemDescription {
+  line-height: 1.5rem;
+  font-weight: 500;
+}
+
+.bcontext__itemDescription > p {
+  white-space: pre-line;
+}
+
+@media (max-width: 425px) {
+  .bcontext__content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }

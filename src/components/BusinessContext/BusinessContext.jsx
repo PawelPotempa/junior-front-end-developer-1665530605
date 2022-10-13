@@ -11,7 +11,7 @@ const BusinessContext = ({ data }) => {
       <hr className={styles.divider} />
       <div className={styles.bcontext__details}>
         <BusinessContextList data={data} />
-        <BusinessContextContent />
+        <BusinessContextContent data={data} />
       </div>
     </section>
   );

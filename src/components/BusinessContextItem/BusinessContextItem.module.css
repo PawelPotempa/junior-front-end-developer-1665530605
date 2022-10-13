@@ -55,5 +55,9 @@
 }
 
 .new {
+  background-color: #fff;
+}
+
+.bcontext__itemTitle.new {
   color: #0165ff;
 }
