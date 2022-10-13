@@ -4,13 +4,13 @@ import BusinessContextList from "../BusinessContextList";
 import BusinessContextContent from "../BusinessContextContent";
 import BusinessContextNavigation from "../BusinessContextNavigation";
 
-const BusinessContext = () => {
+const BusinessContext = ({ data }) => {
   return (
     <section className={styles.bcontext__wrapper}>
       <BusinessContextNavigation />
       <hr className={styles.divider} />
       <div className={styles.bcontext__details}>
-        <BusinessContextList />
+        <BusinessContextList data={data} />
         <BusinessContextContent />
       </div>
     </section>

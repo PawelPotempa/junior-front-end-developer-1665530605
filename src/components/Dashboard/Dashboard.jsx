@@ -8,7 +8,7 @@ const Dashboard = () => {
   return (
     <main className={styles.dashboard__wrapper}>
       <TasksList data={tasksData} />
-      <BusinessContext />
+      <BusinessContext data={tasksData} />
     </main>
   );
 };
