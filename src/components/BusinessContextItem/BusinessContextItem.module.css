@@ -1,0 +1,63 @@
+.bcontext__item {
+  list-style: none;
+  border-radius: 0.5rem;
+  margin: 0.5rem;
+  padding: 0.75rem 1.25rem;
+  width: calc(100% - 1rem);
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.bcontext__item:hover {
+  transform: scale(1.025);
+}
+
+.bcontext__itemInfo {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #6b778c;
+  margin-bottom: 0.5rem;
+}
+
+.bcontext__itemTag {
+  padding: 0.25rem 0.5rem;
+  border-radius: 0.25rem;
+  color: #eaf2fe;
+  background-color: #0165ff;
+  font-weight: 600;
+}
+
+.bcontext__itemTitle {
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.25rem;
+  color: #242325;
+  margin-bottom: 0.5rem;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap;
+}
+
+.bcontext__itemContent {
+  display: -webkit-box;
+  -webkit-line-clamp: 2;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  font-size: 0.75rem;
+}
+
+.active {
+  box-shadow: 0px 8px 16px rgba(84, 84, 84, 0.2);
+  background-color: #fff;
+}
+
+.new {
+  background-color: #fff;
+}
+
+.bcontext__itemTitle.new {
+  color: #0165ff;
+}

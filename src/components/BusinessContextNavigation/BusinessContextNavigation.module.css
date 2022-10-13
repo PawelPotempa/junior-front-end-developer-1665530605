@@ -1,0 +1,26 @@
+.bcontext__navList {
+  padding: 1.5rem 0 1.5rem 3rem;
+  font-weight: 600;
+  font-size: 0.75rem;
+}
+
+.bcontext__navListItem {
+  height: 18px;
+}
+
+.bcontext__navLink {
+  position: relative;
+  display: inline-flex;
+  color: var(--current-color);
+  gap: 1rem;
+}
+
+.bcontext__navLink::after {
+  content: "";
+  position: absolute;
+  height: 2px;
+  bottom: -25px;
+  box-shadow: 0 1px 4px rgba(1, 101, 255, 0.22);
+  width: 100%;
+  background-color: var(--current-color);
+}

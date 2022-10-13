@@ -1,8 +1,20 @@
 import styles from "./BusinessContext.module.css";
 import React from "react";
+import BusinessContextList from "../BusinessContextList";
+import BusinessContextContent from "../BusinessContextContent";
+import BusinessContextNavigation from "../BusinessContextNavigation";
 
-const BusinessContext = () => {
-  return <div>BusinessContext</div>;
+const BusinessContext = ({ data }) => {
+  return (
+    <section className={styles.bcontext__wrapper}>
+      <BusinessContextNavigation />
+      <hr className={styles.divider} />
+      <div className={styles.bcontext__details}>
+        <BusinessContextList data={data} />
+        <BusinessContextContent data={data} />
+      </div>
+    </section>
+  );
 };
 
 export default BusinessContext;

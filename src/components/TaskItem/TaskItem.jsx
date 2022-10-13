@@ -20,9 +20,12 @@ const TaskItem = ({ task }) => {
 
   return (
     <li className={styles[task.status]}>
-      <a className={styles.task__link} href={`/${task.slug}`}>
+      <a
+        className={`${styles.task__link} ${styles[task.status]} `}
+        href={`/${task.slug}`}
+      >
         <WithRect status={task.status}>{renderIcon(task.status)}</WithRect>
-        <span>{task.title}</span>
+        {task.title}
       </a>
     </li>
   );
