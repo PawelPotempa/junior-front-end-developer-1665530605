@@ -7,41 +7,41 @@ import WithRect from "../../assets/WithRect";
 import { NavLink, useParams } from "react-router-dom";
 import { useEffect } from "react";
 
+const renderIcon = (status) => {
+  // eslint-disable-next-line default-case
+  switch (status) {
+    case "completed":
+      return <CompletedIcon />;
+    case "current":
+      return <CurrentIcon />;
+    case "blocked":
+      return <BlockedIcon />;
+  }
+};
+
 const TaskItem = ({ task }) => {
   const { taskSlug } = useParams();
   const [active, setActive] = useState("");
-  const renderIcon = (status) => {
-    // eslint-disable-next-line default-case
-    switch (status) {
-      case "completed":
-        return <CompletedIcon />;
-      case "current":
-        return <CurrentIcon />;
-      case "blocked":
-        return <BlockedIcon />;
-    }
-  };
+  const { status, title, slug } = task;
 
   useEffect(() => {
-    if (taskSlug === task.slug) {
+    if (taskSlug === slug) {
       setActive("active");
     } else {
       setActive("");
     }
-  }, [task.slug, taskSlug]);
+  }, [slug, taskSlug]);
 
   return (
-    <li className={styles[task.status]}>
+    <li className={styles[status]}>
       <NavLink
-        className={`${styles.task__link} ${styles[task.status]} ${
-          styles[active]
-        }`}
-        to={task.status !== "blocked" ? `/${task.slug}` : "#"}
+        className={`${styles.task__link} ${styles[status]} ${styles[active]}`}
+        to={status !== "blocked" ? `/${slug}` : "#"}
       >
-        <WithRect status={task.status} active={active}>
-          {renderIcon(task.status)}
+        <WithRect status={status} active={active}>
+          {renderIcon(status)}
         </WithRect>
-        {task.title}
+        {title}
       </NavLink>
     </li>
   );
