@@ -5,4 +5,5 @@
 
 .blocked {
   color: var(--blocked-color);
+  pointer-events: none;
 }
