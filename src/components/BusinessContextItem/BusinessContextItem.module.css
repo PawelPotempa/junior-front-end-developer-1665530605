@@ -59,5 +59,6 @@
 }
 
 .bcontext__itemTitle.new {
+  font-weight: 600;
   color: #0165ff;
 }

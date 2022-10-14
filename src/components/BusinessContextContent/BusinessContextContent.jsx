@@ -8,8 +8,9 @@ import {
   getTime,
 } from "../../utils/date";
 
-const BusinessContextContent = ({ data }) => {
-  const { author, title, createdAt, content } = data?.businessContexts[0] || {};
+const BusinessContextContent = ({ currentTask, active }) => {
+  const { author, title, createdAt, content } =
+    currentTask?.businessContexts[active] || {};
 
   return (
     <section className={styles.bcontext__contentWrapper}>

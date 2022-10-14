@@ -1,17 +1,11 @@
 import styles from "./BusinessContextList.module.css";
-import React, { useState } from "react";
+import React from "react";
 import BusinessContextItem from "../BusinessContextItem/BusinessContextItem";
 
-const BusinessContextList = ({ data }) => {
-  const [active, setActive] = useState(0);
-
-  const clickHandler = (i) => {
-    setActive(i);
-  };
-
+const BusinessContextList = ({ currentTask, clickHandler, active }) => {
   return (
     <aside className={styles.bcontext__list}>
-      {data?.businessContexts.map((item, i) => (
+      {currentTask?.businessContexts.map((item, i) => (
         <BusinessContextItem
           key={item.id}
           item={item}
