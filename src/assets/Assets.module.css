@@ -23,3 +23,13 @@
   color: var(--blocked-color);
   background-color: var(--blocked-bgc);
 }
+
+.completed.active {
+  color: white;
+  background-color: var(--completed-color);
+}
+
+.current.active {
+  color: white;
+  background-color: var(--current-color);
+}

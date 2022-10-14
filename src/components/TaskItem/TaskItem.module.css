@@ -1,6 +1,15 @@
 .task__link {
   display: flex;
   align-items: center;
+  transition: transform 0.2s ease;
+}
+
+.task__link:hover {
+  transform: scale(1.015);
+}
+
+.task__link.active {
+  font-weight: 600;
 }
 
 .blocked {
