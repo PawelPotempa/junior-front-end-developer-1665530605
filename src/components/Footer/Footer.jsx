@@ -19,7 +19,7 @@ const Footer = () => {
           </li>
         </ul>
       </nav>
-      <div className={styles.info}>
+      <div className={styles.footer__info}>
         <span>nerds.family Version 1.2</span>
         &#183;
         <span>Last update 10/09/2022</span>

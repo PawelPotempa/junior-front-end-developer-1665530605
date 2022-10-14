@@ -1,15 +1,12 @@
 import styles from "./BusinessContextItem.module.css";
-import React from "react";
+import React, { useContext } from "react";
+import { getDate } from "../../utils/date";
+import { useParams } from "react-router-dom";
+import TasksContext from "../../contexts/TasksContext";
+import { useEffect } from "react";
 
 const BusinessContextItem = ({ item, clickHandler, active }) => {
   const { author, title, createdAt, content, seen } = item;
-
-  const dateToMMDD = (d) => {
-    const date = new Date(d);
-    const month = date.toLocaleString("en-GB", { month: "short" });
-    const day = date.toLocaleString("default", { day: "numeric" });
-    return `${month} ${day}`;
-  };
 
   return (
     <li
@@ -22,7 +19,7 @@ const BusinessContextItem = ({ item, clickHandler, active }) => {
         {!seen && <span className={styles.bcontext__itemTag}>NEW</span>}
         <span>{author}</span>
         &#183;
-        <span>{dateToMMDD(createdAt)}</span>
+        <span>{getDate(createdAt)}</span>
       </div>
       <h3 className={`${styles.bcontext__itemTitle} ${!seen && styles["new"]}`}>
         {title}
