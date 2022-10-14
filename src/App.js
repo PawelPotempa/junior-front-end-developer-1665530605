@@ -10,7 +10,7 @@ function App() {
 
   useEffect(() => {
     const currentTask = tasksData.find((obj) => obj.slug === taskSlug);
-    if (currentTask.status === "blocked") {
+    if (currentTask?.status === "blocked" || currentTask === undefined) {
       navigate(`/${tasksData[0].slug}`);
     }
   }, [navigate, taskSlug]);
