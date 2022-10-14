@@ -9,7 +9,7 @@ import {
 } from "../../utils/date";
 
 const BusinessContextContent = ({ data }) => {
-  const { author, title, createdAt, content } = data[3].businessContexts[0];
+  const { author, title, createdAt, content } = data?.businessContexts[0] || {};
 
   return (
     <section className={styles.bcontext__contentWrapper}>
