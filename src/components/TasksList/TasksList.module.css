@@ -1,10 +1,8 @@
 .tasks__container {
   background-color: var(--bg-white);
-  display: flex;
-  flex-direction: column;
-  height: 100%;
   box-shadow: 0 1px 0 0 #dfe1e6;
   border-radius: 0.75rem;
+  height: 100%;
 }
 
 .divider {
