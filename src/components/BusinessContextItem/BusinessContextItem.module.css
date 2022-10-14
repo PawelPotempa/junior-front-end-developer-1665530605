@@ -12,6 +12,12 @@
   transform: scale(1.025);
 }
 
+@media (max-width: 768px) {
+  .bcontext__item {
+    min-width: 14rem;
+  }
+}
+
 .bcontext__itemInfo {
   display: flex;
   align-items: center;
