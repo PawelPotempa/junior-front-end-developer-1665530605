@@ -2,11 +2,11 @@
   height: 3rem;
   min-width: 3rem;
   border-radius: 50%;
-  outline: 1px solid #6b778c;
-  outline-offset: 2px;
 }
 
 .avatar {
   height: 100%;
   border-radius: 50%;
+  outline: 1px solid #6b778c;
+  outline-offset: 2px;
 }
