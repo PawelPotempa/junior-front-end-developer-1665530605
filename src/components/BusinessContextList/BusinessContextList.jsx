@@ -11,7 +11,7 @@ const BusinessContextList = ({ data }) => {
 
   return (
     <aside className={styles.bcontext__list}>
-      {data[3].businessContexts.map((item, i) => (
+      {data?.businessContexts.map((item, i) => (
         <BusinessContextItem
           key={item.id}
           item={item}

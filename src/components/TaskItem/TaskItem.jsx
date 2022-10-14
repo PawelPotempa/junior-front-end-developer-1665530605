@@ -4,6 +4,7 @@ import CompletedIcon from "../../assets/CompletedIcon";
 import CurrentIcon from "../../assets/CurrentIcon";
 import BlockedIcon from "../../assets/BlockedIcon";
 import WithRect from "../../assets/WithRect";
+import { NavLink } from "react-router-dom";
 
 const TaskItem = ({ task }) => {
   const renderIcon = (status) => {
@@ -20,13 +21,13 @@ const TaskItem = ({ task }) => {
 
   return (
     <li className={styles[task.status]}>
-      <a
+      <NavLink
         className={`${styles.task__link} ${styles[task.status]} `}
-        href={`/${task.slug}`}
+        to={task.status !== "blocked" ? `/${task.slug}` : "#"}
       >
         <WithRect status={task.status}>{renderIcon(task.status)}</WithRect>
         {task.title}
-      </a>
+      </NavLink>
     </li>
   );
 };
